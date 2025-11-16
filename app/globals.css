@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* 3D Transform Styles */
+.perspective-\[2000px\] {
+  perspective: 2000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.-rotate-y-12 {
+  transform: rotateY(-12deg);
+}
+
+.swiper-container {
+  padding: 2rem 0;
+  perspective: 1000px;
+}
+
+.swiper-slide {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+@layer utilities {
+  .perspective {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .rotate-y-8 {
+    transform: rotateY(8deg);
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}

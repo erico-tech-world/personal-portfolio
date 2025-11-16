@@ -1,0 +1,66 @@
+{
+  "node": {
+    "5b911050c232084347c3341d4733960fbcc284cb": {
+      "workers": {
+        "app/admin-panel/messages/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!",
+        "app/admin-panel/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/admin-panel/messages/page": "action-browser",
+        "app/admin-panel/about/page": "action-browser"
+      }
+    },
+    "6eefffbc6e50379c9845c4cb6e6684e5161d6dfc": {
+      "workers": {
+        "app/admin-panel/messages/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!",
+        "app/admin-panel/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/admin-panel/messages/page": "action-browser",
+        "app/admin-panel/about/page": "action-browser"
+      }
+    },
+    "8d39193cffc9b869956500a11fc8d939e6cb020a": {
+      "workers": {
+        "app/admin-panel/messages/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!",
+        "app/admin-panel/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/admin-panel/messages/page": "action-browser",
+        "app/admin-panel/about/page": "action-browser"
+      }
+    },
+    "bd5567fcfc638b99d0f1fa3db63d78142d3a47b3": {
+      "workers": {
+        "app/admin-panel/messages/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!",
+        "app/admin-panel/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/admin-panel/messages/page": "action-browser",
+        "app/admin-panel/about/page": "action-browser"
+      }
+    },
+    "cbb9a3ae92ab8683bfceb428855c390481bb07e6": {
+      "workers": {
+        "app/admin-panel/messages/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!",
+        "app/admin-panel/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/admin-panel/messages/page": "action-browser",
+        "app/admin-panel/about/page": "action-browser"
+      }
+    },
+    "eb936b6e99e42f69326ee6ee6e3ce39d4e329957": {
+      "workers": {
+        "app/admin-panel/messages/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!",
+        "app/admin-panel/about/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CHenry%5C%5CDownloads%5C%5Cpersonal-portfolio%5C%5Capp%5C%5Cactions.ts%22%2C%5B%22deleteContactMessage%22%2C%22deleteGalleryItem%22%2C%22updateGalleryItem%22%2C%22updateAboutContent%22%2C%22updateCv%22%2C%22addGalleryItem%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/admin-panel/messages/page": "action-browser",
+        "app/admin-panel/about/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "FdEl2PNgbHvqhSSu/2EVhABkd+w0di4fHgmV2uJtKA4="
+}
