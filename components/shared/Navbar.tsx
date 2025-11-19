@@ -66,12 +66,12 @@ const Navbar: React.FC = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
           </Link>
-          <div className="flex-grow hidden md:flex justify-center space-x-8 md:ml-16">
+          <div className="flex-grow hidden lg:flex justify-center space-x-8 md:ml-16">
             {NAV_LINKS.map((link) => (
               <a key={link.name} href={link.href} onClick={(e) => scrollToSection(e, link.href)} className="text-white hover:text-accent-cyan transition-colors duration-300">{link.name}</a>
             ))}
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
         {isOpen && (
-          <div className="md:hidden bg-navy-medium">
+          <div className="lg:hidden bg-navy-medium">
             {NAV_LINKS.map((link) => (
               <a key={link.name} href={link.href} onClick={(e) => scrollToSection(e, link.href)} className="block px-6 py-3 text-white hover:bg-navy-dark">{link.name}</a>
             ))}

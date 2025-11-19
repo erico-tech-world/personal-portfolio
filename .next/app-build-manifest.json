@@ -12,20 +12,30 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/admin-panel/messages/page": [
+    "/admin-panel/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/admin-panel/messages/page.js"
+      "static/chunks/app/admin-panel/about/page.js"
     ],
     "/admin-panel/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/admin-panel/layout.js"
     ],
-    "/admin-panel/about/page": [
+    "/admin-panel/messages/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/admin-panel/about/page.js"
+      "static/chunks/app/admin-panel/messages/page.js"
+    ],
+    "/admin-panel/gallery/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin-panel/gallery/page.js"
+    ],
+    "/admin-panel/services/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin-panel/services/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",

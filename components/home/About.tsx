@@ -54,7 +54,7 @@ I look forward to the opportunity to discuss how my background, skills, and enth
             <div className="absolute bottom-[10%] left-[20%] w-8 h-8 bg-accent-green opacity-15 rounded-md animate-float" style={{ animationDelay: '5s' }}></div>
             <div className="absolute bottom-[5%] right-[25%] w-12 h-12 bg-accent-green opacity-20 rounded-md transform rotate-45 animate-float" style={{ animationDelay: '2s' }}></div>
 
-            <div className="container mx-auto px-4 py-16">
+            <div className="container mx-auto px-4 pt-0 pb-16">
                 <div className="grid md:grid-cols-12 gap-8 items-start">
                     <div className="md:col-span-7 md:ml-16">
                         <h2 className="text-5xl font-black text-white mb-6">
