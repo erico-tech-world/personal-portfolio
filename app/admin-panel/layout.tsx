@@ -4,6 +4,26 @@ import { useState, useEffect } from 'react';
 import type { User } from '@supabase/supabase-js';
 import Sidebar from '@/components/admin/Sidebar';
 
+// Hamburger Icon component
+const MenuIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+        {...props}
+        stroke="currentColor"
+        fill="none"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        height="1em"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+);
+
 function AdminLogin() {
     const supabase = createClient();
     const [email, setEmail] = useState('');
@@ -20,9 +40,9 @@ function AdminLogin() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="min-h-screen flex items-center justify-center bg-navy-dark">
             <div className="bg-navy-medium p-8 rounded-lg shadow-xl w-full max-w-md">
-                <h2 className="text-3xl font-bold text-center mb-6">Admin Login</h2>
+                <h2 className="text-3xl font-bold text-center mb-6 text-white">Admin Login</h2>
                 <form onSubmit={handleLogin}>
                     <div className="mb-4">
                         <input 
@@ -53,6 +73,7 @@ function AdminLogin() {
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
     const [user, setUser] = useState<User | null>(null);
     const [loading, setLoading] = useState(true);
+    const [isSidebarOpen, setSidebarOpen] = useState(false);
     const supabase = createClient();
 
     useEffect(() => {
@@ -75,7 +96,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     };
 
     if (loading) {
-        return <div className="min-h-screen flex items-center justify-center"><p>Loading...</p></div>;
+        return <div className="min-h-screen flex items-center justify-center bg-navy-dark text-white"><p>Loading...</p></div>;
     }
 
     if (!user) {
@@ -83,17 +104,37 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     }
 
     return (
-        <div className="relative min-h-screen flex bg-navy-dark text-white">
-            <aside className="w-64 bg-navy-medium p-6 flex-shrink-0 sticky top-0 h-screen overflow-y-auto">
+        <div className="relative min-h-screen md:flex bg-navy-dark text-white">
+            {/* Overlay for mobile */}
+            <div
+                className={`fixed inset-0 bg-black bg-opacity-50 z-10 md:hidden ${isSidebarOpen ? 'block' : 'hidden'}`}
+                onClick={() => setSidebarOpen(false)}
+            ></div>
+
+            {/* Sidebar */}
+            <aside
+                className={`fixed top-0 left-0 h-full w-64 bg-navy-medium p-6 transform z-20 transition-transform duration-300 ease-in-out md:relative md:translate-x-0 ${
+                    isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+                }`}
+            >
                 <Sidebar />
             </aside>
-            <main className="flex-1 p-8">
-                <div className="flex justify-between items-center mb-8">
-                    <h1 className="text-2xl">Welcome, {user.email}</h1>
-                    <button onClick={handleLogout} className="bg-red-500 text-white font-bold py-2 px-6 rounded-md hover:bg-red-600 transition-colors">
+            
+            <main className="flex-1 p-4 md:p-8 overflow-y-auto">
+                <header className="flex justify-between items-center mb-8">
+                    <button
+                        className="md:hidden text-white"
+                        onClick={() => setSidebarOpen(!isSidebarOpen)}
+                    >
+                        <MenuIcon className="h-6 w-6" />
+                    </button>
+                    <h1 className="text-lg sm:text-xl md:text-2xl truncate">
+                        Welcome, <span className="font-semibold">{user.email?.split('@')[0]}</span>
+                    </h1>
+                    <button onClick={handleLogout} className="bg-red-500 text-white font-bold py-2 px-3 sm:px-4 md:px-6 rounded-md hover:bg-red-600 transition-colors text-xs sm:text-sm md:text-base">
                         Logout
                     </button>
-                </div>
+                </header>
                 {children}
             </main>
         </div>

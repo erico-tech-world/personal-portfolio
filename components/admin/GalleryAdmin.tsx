@@ -135,33 +135,48 @@ export default function GalleryAdmin() {
             <div className="bg-navy-medium p-6 rounded-lg">
                  <h3 className="text-2xl font-bold mb-4">Existing Items</h3>
                  {loading ? <p>Loading items...</p> : (
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-left">
-                            <thead>
-                                <tr className="border-b border-gray-600">
-                                    <th className="p-3">Image</th>
-                                    <th className="p-3">Title</th>
-                                    <th className="p-3">Category</th>
-                                    <th className="p-3 text-right">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {galleryItems.map((item) => (
-                                    <tr key={item.id} className="border-b border-gray-700">
-                                        <td className="p-3">
-                                            <Image src={item.imageUrl} alt={item.title || item.category} width={80} height={80} className="rounded-md object-cover h-20 w-20" />
-                                        </td>
-                                        <td className="p-3">{item.title}</td>
-                                        <td className="p-3">{item.category}</td>
-                                        <td className="p-3 text-right">
-                                            <button onClick={() => setEditingItem(item)} className="bg-accent-amber text-white font-bold py-1 px-4 rounded-md hover:bg-amber-600 transition-colors mr-2">Edit</button>
-                                            <button onClick={() => handleDelete(item)} disabled={isPending} className="bg-red-500 text-white font-bold py-1 px-4 rounded-md hover:bg-red-600 transition-colors disabled:opacity-50">Delete</button>
-                                        </td>
+                    <>
+                        <div className="overflow-x-auto hidden md:block">
+                            <table className="w-full text-left">
+                                <thead>
+                                    <tr className="border-b border-gray-600">
+                                        <th className="p-3">Image</th>
+                                        <th className="p-3">Title</th>
+                                        <th className="p-3">Category</th>
+                                        <th className="p-3 text-right">Actions</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                </thead>
+                                <tbody>
+                                    {galleryItems.map((item) => (
+                                        <tr key={item.id} className="border-b border-gray-700">
+                                            <td className="p-3">
+                                                <Image src={item.imageUrl} alt={item.title || 'Gallery item'} width={80} height={80} className="rounded-md object-cover h-20 w-20" />
+                                            </td>
+                                            <td className="p-3">{item.title}</td>
+                                            <td className="p-3">{item.category}</td>
+                                            <td className="p-3 text-right">
+                                                <button onClick={() => setEditingItem(item)} className="bg-accent-amber text-white font-bold py-1 px-4 rounded-md hover:bg-amber-600 transition-colors mr-2">Edit</button>
+                                                <button onClick={() => handleDelete(item)} disabled={isPending} className="bg-red-500 text-white font-bold py-1 px-4 rounded-md hover:bg-red-600 transition-colors disabled:opacity-50">Delete</button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
+                            {galleryItems.map((item) => (
+                                <div key={item.id} className="bg-navy-dark rounded-lg p-4 flex flex-col">
+                                    <Image src={item.imageUrl} alt={item.title || 'Gallery item'} width={150} height={150} className="rounded-md object-cover w-full h-40 mb-4" />
+                                    <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                                    <p className="text-gray-400 mb-4">{item.category}</p>
+                                    <div className="mt-auto flex justify-end gap-2">
+                                        <button onClick={() => setEditingItem(item)} className="bg-accent-amber text-white font-bold py-1 px-3 rounded-md hover:bg-amber-600 transition-colors text-sm">Edit</button>
+                                        <button onClick={() => handleDelete(item)} disabled={isPending} className="bg-red-500 text-white font-bold py-1 px-3 rounded-md hover:bg-red-600 transition-colors text-sm disabled:opacity-50">Delete</button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </>
                  )}
             </div>
         </div>

@@ -44,9 +44,9 @@ export default function ContactMessagesAdmin() {
                     {messages.length === 0 && <p>No messages yet.</p>}
                     {messages.map(msg => (
                         <div key={msg.id} className="bg-navy-dark p-4 rounded-md border border-gray-700">
-                            <div className="flex justify-between items-start">
+                            <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-2">
                                 <div>
-                                    <p className="font-bold">{msg.name} <span className="font-normal text-gray-400">&lt;{msg.email}&gt;</span></p>
+                                    <p className="font-bold">{msg.name} <span className="font-normal text-gray-400 break-all">&lt;{msg.email}&gt;</span></p>
                                     <p className="text-sm text-gray-400">
                                         Received on: {new Date(msg.created_at).toLocaleString()}
                                     </p>
@@ -54,7 +54,7 @@ export default function ContactMessagesAdmin() {
                                 <button
                                     onClick={() => handleDelete(msg.id)}
                                     disabled={isPending}
-                                    className="bg-red-500 text-white font-bold py-1 px-3 rounded-md hover:bg-red-600 transition-colors disabled:opacity-50 text-sm"
+                                    className="bg-red-500 text-white font-bold py-1 px-3 rounded-md hover:bg-red-600 transition-colors disabled:opacity-50 text-sm self-start sm:self-auto"
                                 >
                                     Delete
                                 </button>

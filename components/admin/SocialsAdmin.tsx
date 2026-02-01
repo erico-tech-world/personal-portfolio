@@ -128,7 +128,7 @@ export default function SocialsAdmin() {
             </div>
 
             {/* Existing Links Table */}
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto hidden md:block">
                 <h3 className="text-2xl font-bold mb-4">Existing Links</h3>
                 {loading ? (
                     <div className="flex justify-center p-8"><Spinner size="h-16 w-16" /></div>
@@ -155,6 +155,18 @@ export default function SocialsAdmin() {
                         </tbody>
                     </table>
                 )}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:hidden">
+                {socialLinks.map((link) => (
+                    <div key={link.id} className="bg-navy-dark rounded-lg p-4 flex flex-col">
+                        <h4 className="font-bold text-lg mb-1">{link.platform}</h4>
+                        <p className="text-gray-400 mb-4 break-all">{link.url}</p>
+                        <div className="mt-auto flex justify-end gap-2">
+                            <button onClick={() => setEditingLink(link)} className="bg-accent-amber text-white font-bold py-1 px-3 rounded-md hover:bg-amber-600 transition-colors text-sm">Edit</button>
+                            <button onClick={() => handleDelete(link.id)} disabled={isPending} className="bg-red-500 text-white font-bold py-1 px-3 rounded-md hover:bg-red-600 transition-colors text-sm disabled:opacity-50">Delete</button>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

@@ -189,13 +189,7 @@ export default function ServicesAdmin() {
             </div>
 
             {/* Existing Services Table */}
-            <div className="overflow-x-auto">
-                <h3 className="text-2xl font-bold mb-4">Existing Services</h3>
-                 {loading ? (
-                    <div className="flex justify-center p-8">
-                        <Spinner size="h-16 w-16" />
-                    </div>
-                 ) : (
+            <div className="overflow-x-auto hidden md:block">
                     <table className="w-full text-left">
                         <thead>
                             <tr className="border-b border-gray-600">
@@ -219,8 +213,21 @@ export default function ServicesAdmin() {
                             ))}
                         </tbody>
                     </table>
-                 )}
-            </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
+                    {services.map((service) => (
+                        <div key={service.id} className="bg-navy-dark rounded-lg p-4 flex flex-col">
+                            <h4 className="font-bold text-lg mb-1">{service.title}</h4>
+                            <p className="text-gray-400 mb-4">
+                                {new Intl.NumberFormat('en-US', { style: 'currency', currency: service.currency }).format(service.price_min)} - {new Intl.NumberFormat('en-US', { style: 'currency', currency: service.currency }).format(service.price_max)}
+                            </p>
+                            <div className="mt-auto flex justify-end gap-2">
+                                <button onClick={() => setEditingService(service)} className="bg-accent-amber text-white font-bold py-1 px-3 rounded-md hover:bg-amber-600 transition-colors text-sm">Edit</button>
+                                <button onClick={() => handleDelete(service.id)} disabled={isPending} className="bg-red-500 text-white font-bold py-1 px-3 rounded-md hover:bg-red-600 transition-colors text-sm disabled:opacity-50">Delete</button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
         </div>
     );
 }

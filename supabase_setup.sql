@@ -5,7 +5,7 @@
 -- a secure Role-Based Access Control (RBAC) system, including a dynamic
 -- services table with currency support. This version corrects the RLS policy syntax.
 --
--- Author: Gemini
+-- Author: Eric
 -- Date: October 28, 2025
 --
 
